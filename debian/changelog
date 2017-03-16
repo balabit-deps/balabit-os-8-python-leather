@@ -1,0 +1,5 @@
+python-leather (0.3.3-1) unstable; urgency=low
+
+  * Initial release. (Closes: #857388)
+
+ -- Ghislain Antony Vaillant <ghisvail@gmail.com>  Thu, 16 Mar 2017 15:59:53 +0000

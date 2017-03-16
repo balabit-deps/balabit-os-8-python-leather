@@ -1,0 +1,24 @@
+From: Ghislain Antony Vaillant <ghisvail@gmail.com>
+Date: Sun, 12 Mar 2017 22:18:39 +0000
+Subject: Use packaged docs
+
+---
+ docs/conf.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/docs/conf.py b/docs/conf.py
+index c653d77..871bc70 100644
+--- a/docs/conf.py
++++ b/docs/conf.py
+@@ -17,7 +17,10 @@ extensions = [
+ autodoc_default_flags = ['members', 'show-inheritance']
+ 
+ intersphinx_mapping = {
+-    'python': ('http://docs.python.org/3.5', None)
++    'python': (
++        'http://docs.python.org/3',
++        '/usr/share/doc/python3/html/objects.inv'
++    )
+ }
+ 
+ # Templates

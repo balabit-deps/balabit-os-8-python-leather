@@ -1,0 +1,12 @@
+Test-Command: set -e
+ ; cp -r tests "$AUTOPKGTEST_TMP"
+ ; for py in $(py3versions -r 2>/dev/null)
+ ; do cd "$AUTOPKGTEST_TMP"
+ ; echo "Testing with $py:"
+ ; $py -m unittest discover -v
+ ; done
+Depends: python3-all,
+         python3-cssselect,
+         python3-leather,
+         python3-lxml
+Restrictions: allow-stderr

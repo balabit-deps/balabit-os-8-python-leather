@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE = 1
+
+export PYBUILD_NAME = leather
+ifneq (,$(findstring nocheck,$(DEB_BUILD_PROFILES)))
+export PYBUILD_DISABLE = test
+endif
+
+%:
+	dh $@ --with python3,sphinxdoc --buildsystem=pybuild
+
+override_dh_auto_build: export http_proxy=127.0.0.1:9
+override_dh_auto_build: export https_proxy=127.0.0.1:9
+override_dh_auto_build:
+	dh_auto_build
+ifeq (,$(findstring nodoc,$(DEB_BUILD_PROFILES)))
+	PYTHONPATH=. sphinx-build -N -b html docs build/html
+endif

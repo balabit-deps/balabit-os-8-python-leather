@@ -1,0 +1,9 @@
+Document: python-leather-doc
+Title: leather documentation
+Author: Christopher Groskopf
+Abstract: This is the reference documentation for leather.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/python-leather-doc/html/index.html
+Files: /usr/share/doc/python-leather-doc/html/*.html
